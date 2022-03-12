@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".view.FeedActivity">
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginStart="1dp"
+        android:layout_marginTop="1dp"
+        android:layout_marginEnd="1dp"
+        android:layout_marginBottom="1dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <FrameLayout
+        android:id="@+id/feed_activity_frameLayout"
+        android:layout_width="match_parent"
+        android:layout_above="@id/feed_activity_bottomNavigationView"
+        android:layout_height="match_parent"/>
+
+        <com.google.android.material.bottomnavigation.BottomNavigationView
+            android:id="@+id/feed_activity_bottomNavigationView"
+            android:layout_width="match_parent"
+            android:background="#ffffff"
+            android:layout_height="56dp"
+            app:itemIconTint="@color/bottombar_color"
+            app:itemTextColor="@color/bottombar_color"
+            app:menu="@menu/bottombar_menu"
+            android:layout_alignParentBottom="true"
+            />
+</RelativeLayout>
